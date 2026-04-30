@@ -15,7 +15,7 @@ class DioClient {
     );
 
     dio.interceptors.add(
-      LogInterceptor(responseBody: true), // ✅ هيطبع كل response
+      LogInterceptor(responseBody: true), 
     );
 
     return dio;

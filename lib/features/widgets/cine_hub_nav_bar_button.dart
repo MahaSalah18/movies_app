@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/themes/colors/app_colors.dart';
-
 class CineHubNavBarButton extends StatelessWidget {
   const CineHubNavBarButton({
     super.key,
@@ -13,9 +11,9 @@ class CineHubNavBarButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: AppColors.backgroundColor,
-      selectedItemColor: AppColors.primaryColor,
-      unselectedItemColor: AppColors.textSecondary,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      selectedItemColor: Theme.of(context).colorScheme.primary,
+      unselectedItemColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
       onTap: onTap,
       currentIndex: currentIndex,
       selectedLabelStyle: const TextStyle(
@@ -27,7 +25,7 @@ class CineHubNavBarButton extends StatelessWidget {
       selectedIconTheme: IconThemeData(
         shadows: [
           BoxShadow(
-            color: AppColors.primaryColor.withOpacity(0.3),
+            color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),

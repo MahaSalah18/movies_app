@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/themes/colors/app_colors.dart';
-
 class WatchNowButton extends StatelessWidget {
   const WatchNowButton({super.key});
 
@@ -8,22 +6,23 @@ class WatchNowButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-      
         fixedSize: Size(150, 30),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        backgroundColor: AppColors.primaryColor,
-        // foregroundColor: AppColors.textPrimary,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       onPressed: () {},
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.play_arrow, color: AppColors.textPrimary),
+          Icon(
+            Icons.play_arrow,
+            color: Theme.of(context).textTheme.bodyLarge?.color,
+          ),
           Text(
             "Watch Now",
             style: TextStyle(
-              color: AppColors.textPrimary,
+              color: Theme.of(context).textTheme.bodyLarge?.color,
               fontWeight: FontWeight.bold,
             ),
           ),

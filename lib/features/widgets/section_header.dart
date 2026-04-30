@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/themes/colors/app_colors.dart';
-
 class SectionHeader extends StatelessWidget {
   const SectionHeader({super.key, required this.title, this.trailing});
    final String title;
@@ -16,8 +14,8 @@ class SectionHeader extends StatelessWidget {
           children: [
             Text(
               title,
-              style: const TextStyle(
-                color: AppColors.textPrimary,
+              style: TextStyle(
+                color: Theme.of(context).textTheme.bodyLarge?.color,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -27,7 +25,7 @@ class SectionHeader extends StatelessWidget {
               width: 40,
               height: 3,
               decoration: BoxDecoration(
-                color: AppColors.primaryColor,
+                color: Theme.of(context).primaryColor,
                 borderRadius: BorderRadius.circular(2),
               ),
             ),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/themes/colors/app_colors.dart';
-
 class GenreChip extends StatelessWidget {
   const GenreChip({super.key, required this.label});
    final String label;
@@ -10,14 +8,17 @@ class GenreChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: AppColors.textPrimary.withOpacity(0.12),
+        color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.12),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.textPrimary.withOpacity(0.24), width: 0.8),
+        border: Border.all(
+          color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.24) ?? Colors.transparent,
+          width: 0.8,
+        ),
       ),
       child: Text(
         label,
-        style: const TextStyle(
-          color:AppColors.textSecondary,
+        style: TextStyle(
+          color: Theme.of(context).textTheme.bodyMedium?.color,
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color primaryColor = Color(0xFFE50914); // الأحمر الأساسي (زرار Watch Now)
-  static const Color backgroundColor = Color(0xFF000000); // الخلفية الأساسية (أسود)
+  static const Color backgroundColorDark = Color(0xFF000000); // الخلفية الأساسية (أسود)
+  static const Color backgroundColorLight =  Color(0xFFF5F5F5); 
   static const Color cardColor = Color(0xFF121212); // لون الكارد/البوكس
   static const Color secondaryColor = Color(0xFF1F1F1F); // خلفيات ثانوية
   static const Color textPrimary = Color(0xFFFFFFFF); // النص الأساسي (أبيض)
